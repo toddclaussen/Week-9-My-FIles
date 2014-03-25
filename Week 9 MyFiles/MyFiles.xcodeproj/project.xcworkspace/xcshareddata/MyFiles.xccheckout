@@ -5,36 +5,36 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>9B60F925-CE6A-40EB-93F0-73267922EFAD</string>
+	<string>DDB774F1-F805-4165-A61E-8251C5C26986</string>
 	<key>IDESourceControlProjectName</key>
 	<string>MyFiles</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>FC37443D-8102-44D6-8030-E78267D57B3E</key>
-		<string>https://github.com/ioscourse/Week9MyFiles.git</string>
+		<key>92C4F442-0A39-4965-B72F-45F104502033</key>
+		<string>https://github.com/ioscourse/Week-9-My-FIles.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>MyFiles.xcodeproj/project.xcworkspace</string>
+	<string>Week 9 MyFiles/MyFiles.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>FC37443D-8102-44D6-8030-E78267D57B3E</key>
-		<string>../..</string>
+		<key>92C4F442-0A39-4965-B72F-45F104502033</key>
+		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/ioscourse/Week9MyFiles.git</string>
+	<string>https://github.com/ioscourse/Week-9-My-FIles.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>FC37443D-8102-44D6-8030-E78267D57B3E</string>
+	<string>92C4F442-0A39-4965-B72F-45F104502033</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>FC37443D-8102-44D6-8030-E78267D57B3E</string>
+			<string>92C4F442-0A39-4965-B72F-45F104502033</string>
 			<key>IDESourceControlWCCName</key>
-			<string>Week 9 MyFiles</string>
+			<string>Week-9-My-FIles</string>
 		</dict>
 	</array>
 </dict>

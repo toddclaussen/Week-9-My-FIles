@@ -1,24 +1,33 @@
 //
-//  MyFilesViewController.m
+//  FileOne ViewComtrollerViewController.m
 //  MyFiles
 //
-//  Created by Charles Konkol on 3/25/13.
-//  Copyright (c) 2013 RVC Student. All rights reserved.
-//  Updated October 2013 
+//  Created by Todd Claussen on 3/24/14.
+//  Copyright (c) 2014 RVC Student. All rights reserved.
+//
 
-#import "MyFilesViewController.h"
+#import "FileOne ViewComtrollerViewController.h"
 
-@interface MyFilesViewController ()
+@interface FileOne_ViewComtrollerViewController ()
 
 @end
 
-@implementation MyFilesViewController
-@synthesize WebView;
+@implementation FileOne_ViewComtrollerViewController
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        // Custom initialization
+    }
+    return self;
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    // Do any additional setup after loading the view.
+    [self loadexternalFile];
 }
 
 - (void)didReceiveMemoryWarning
@@ -27,69 +36,21 @@
     // Dispose of any resources that can be recreated.
 }
 
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
+
 - (void)dealloc {
-    [WebView release];
+    [_Webview release];
     [super dealloc];
 }
-- (IBAction)btnLocal:(id)sender {
-    [self loadlocalFile];
-}
-- (IBAction)btnWeb:(id)sender {
-    [self loadexternalFile];
-    
-}
-- (void)loadlocalFile
-{
-    //check if iphone or ipad
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        //load file
-        NSString *path = [[NSBundle mainBundle] pathForResource:@"angrybirds" ofType:@"pdf"];
-        NSURL *targetURL = [NSURL fileURLWithPath:path];
-        NSURLRequest *request = [NSURLRequest requestWithURL:targetURL];
-        
-        //get screensize
-         CGSize size = [self getScreenSize];
-        
-        //set screensize
-        UIWebView *webView=[[UIWebView alloc] initWithFrame:CGRectMake(0, 50, size.width, size.height-100)];
-        [[webView scrollView] setContentOffset:CGPointMake(0,size.height) animated:YES];
-        
-        //scroll 0 left pixel, 50 top pixel
-        [webView stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"window.scrollTo(0.0, 50.0)"]];
-        [webView loadRequest:request];
-        
-        //load file into webview
-        [self.view addSubview:webView];
-        [webView release];
-
-        
-    }
-    
-    else {
-        //load file
-        NSString *path = [[NSBundle mainBundle] pathForResource:@"angrybirds" ofType:@"pdf"];
-        NSURL *targetURL = [NSURL fileURLWithPath:path];
-        NSURLRequest *request = [NSURLRequest requestWithURL:targetURL];
-        
-        //set screensize
-         CGSize size = [self getScreenSize];
-        UIWebView *webView=[[UIWebView alloc] initWithFrame:CGRectMake(0, 50, size.width, size.height-100)];
-        [[webView scrollView] setContentOffset:CGPointMake(0,size.height) animated:YES];
-        
-       //scroll 0 left pixel, 50 top pixel
-        [webView stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"window.scrollTo(0.0, 50.0)"]];
-        [webView loadRequest:request];
-        
-           //load file into webview
-        [self.view addSubview:webView];
-        [webView release];
-
-        
-    }
-
-   
-}
-
 - (void)loadexternalFile
 {
     //check if connect to internet before external URL
@@ -113,7 +74,7 @@
             //set size
             UIWebView *webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 50, size.width, size.height-100)];
             
-            NSURL *targetURL = [NSURL URLWithString:@"http://ckonkol.com/wp-content/uploads/2014/01/RW-Objective-C-Cheatsheet-v-1-5.pdf"];
+            NSURL *targetURL = [NSURL URLWithString:@"http://www.nytimes.com"];
             NSURLRequest *request = [NSURLRequest requestWithURL:targetURL];
             [webView loadRequest:request];
             
@@ -124,28 +85,29 @@
         }
         
         else {
-               //get screen size
-              CGSize size = [self getScreenSize];
+            //get screen size
+            CGSize size = [self getScreenSize];
             
-              //set size
+            //set size
             UIWebView *webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 50, size.width, size.height-100)];
             
-            NSURL *targetURL = [NSURL URLWithString:@"http://ckonkol.com/wp-content/uploads/2014/01/RW-Objective-C-Cheatsheet-v-1-5.pdf"];
+            NSURL *targetURL = [NSURL URLWithString:@"http://www.nytimes.com"];
             NSURLRequest *request = [NSURLRequest requestWithURL:targetURL];
             [webView loadRequest:request];
             
-              //load file in to webview
+            //load file in to webview
             [self.view addSubview:webView];
             [webView release];
             
         }
-
+        
         
     }
-   
-   
-
+    
+    
+    
 }
+
 - (CGSize)getScreenSize
 {
     //Get Screen size
@@ -180,7 +142,5 @@
         NSLog(@"Device is not connected to the internet");
         return NO;
     }
-    
 }
-
 @end

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F18597218E1127B0001A777 /* FileOne ViewComtrollerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F18597118E1127B0001A777 /* FileOne ViewComtrollerViewController.m */; };
 		127247291701159C00DE5441 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 127247281701159C00DE5441 /* UIKit.framework */; };
 		1272472B1701159C00DE5441 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1272472A1701159C00DE5441 /* Foundation.framework */; };
 		1272472D1701159C00DE5441 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1272472C1701159C00DE5441 /* CoreGraphics.framework */; };
@@ -22,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F18597018E1127B0001A777 /* FileOne ViewComtrollerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FileOne ViewComtrollerViewController.h"; sourceTree = "<group>"; };
+		0F18597118E1127B0001A777 /* FileOne ViewComtrollerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FileOne ViewComtrollerViewController.m"; sourceTree = "<group>"; };
 		127247251701159C00DE5441 /* MyFiles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyFiles.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		127247281701159C00DE5441 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		1272472A1701159C00DE5441 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -55,9 +58,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F18596F18E111D80001A777 /* Files */ = {
+			isa = PBXGroup;
+			children = (
+				0F18597018E1127B0001A777 /* FileOne ViewComtrollerViewController.h */,
+				0F18597118E1127B0001A777 /* FileOne ViewComtrollerViewController.m */,
+			);
+			name = Files;
+			sourceTree = "<group>";
+		};
 		1272471C1701159C00DE5441 = {
 			isa = PBXGroup;
 			children = (
+				0F18596F18E111D80001A777 /* Files */,
 				1272472E1701159C00DE5441 /* MyFiles */,
 				127247271701159C00DE5441 /* Frameworks */,
 				127247261701159C00DE5441 /* Products */,
@@ -186,6 +199,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F18597218E1127B0001A777 /* FileOne ViewComtrollerViewController.m in Sources */,
 				127247351701159C00DE5441 /* main.m in Sources */,
 				127247391701159C00DE5441 /* MyFilesAppDelegate.m in Sources */,
 				127247451701159C00DE5441 /* MyFilesViewController.m in Sources */,
